@@ -3,7 +3,6 @@
 # ===============================
 # Database configuration (contains credentials)
 config/database_config.php
-database.php
 db_config.php
 
 # Environment configuration files
