@@ -1,28 +1,62 @@
-# Database configuration files (contains sensitive credentials)
+# ===============================
+# Sensitive Files
+# ===============================
+# Database configuration (contains credentials)
 config/database_config.php
+database.php
+db_config.php
 
-# Environment files
+# Environment configuration files
 .env
-.env.local
-.env.production
+.env.*
+!.env.example  # Keep example env files
 
-# Log files
+# ===============================
+# Logs & Debug Files
+# ===============================
 *.log
+error_log
+debug.log
 
-# Cache files
+# ===============================
+# Cache & Temporary Files
+# ===============================
 cache/
 tmp/
+*.cache
+*.tmp
+*.temp
 
-# IDE files
+# ===============================
+# IDE & Editor Files
+# ===============================
 .vscode/
 .idea/
 *.swp
 *.swo
+*.mdc
+*.cursor
 
-# OS generated files
+# ===============================
+# OS Generated Files
+# ===============================
 .DS_Store
 Thumbs.db
 
-# Backup files
+# ===============================
+# Backup & Export Files
+# ===============================
 *.bak
 *.backup
+*.old
+*.sql
+*.sql.gz
+*.tar
+*.zip
+
+# ===============================
+# PHP Dependency Files
+# ===============================
+vendor/
+composer.lock
+
