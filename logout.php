@@ -1,9 +1,6 @@
 <?php
-require_once 'auth/user_authentication.php';
-
-$auth = new UserAuthentication($mysqli);
-$auth->logoutUser();
-
-header("Location: login.php");
+session_start();
+session_destroy();
+header("Location: index.php");
 exit;
 ?>
