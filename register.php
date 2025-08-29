@@ -1,6 +1,6 @@
 <?php
 include "config.php";
-include "includes/functions.php";
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = sanitize_input($_POST["username"]);

@@ -1,0 +1,10 @@
+---
+description: when choosing technologies to use or implementing new ones
+alwaysApply: false
+---
+
+Limitations in the Use of Technology Frameworks
+CAPSTONE PROJECT 2 must exhibit foundational knowledge; therefore, using the following technologies is prohibited.
+No SQL Databases (e.g., MongoDB, CouchDB, CouchBase, Cassandra, HBase, Redis, Riak, Neo4J, SupaBase, and Firebase) Content Management Systems (e.g., Drupal, WordPress, Laravel, Magento, and others of the exact nature.)
+Pre-made templates or themes are NOT ALLOWED. (e.g., Bootstrap Themes and alike.)
+■ APIs and libraries used to support the development of the project are allowed. (e.g., JQuery, Google Maps, and others of the exact nature.)

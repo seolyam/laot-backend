@@ -1,0 +1,24 @@
+---
+alwaysApply: false
+---
+
+La-ot overview.
+La-ot is a wearable-integrated goal-tracking app for student-athletes. It links Samsung Wear OS watches, a Kotlin Android app, and a PHP/MySQL coach dashboard. The app delivers near-real-time biometrics, workout logs, and gamified progress.
+
+Users & core features.
+Primary users: student-athletes and coaches at private colleges. Athletes see live heart rate, pace, distance, session history, and goals. Coaches use an interactive web dashboard for analytics, individualized plans, and role-based access.
+
+Project summary (Project description / Context):
+La-ot is a wearable-integrated goal-tracking app for student-athletes.
+
+Users & features (Users & Features):
+Primary users: student-athletes and coaches. Live biometrics, workout logs, history, goals, gamification, and coach analytics.
+
+Technical details (Technical details / Implementation):
+Wear OS watches → BLE → Kotlin Android app → RESTful PHP API → MySQL. Coach dashboard: HTML/CSS/JS, Chart.js.
+
+Assistant behavior (Assistant rules / Instructions):
+Answer simply and directly. Prioritize BLE sync, data models, API design, UX flows, and security. Suggest Kotlin, PHP, MySQL code only when asked. Flag any advice that risks health or privacy. Quote the spec when citing La-ot features.
+
+Security & privacy (Constraints / Notes):
+Enforce TLS, encrypt sensitive fields, use RBAC, record consent. Do not suggest actions that endanger users.

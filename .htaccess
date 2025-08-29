@@ -1,0 +1,44 @@
+# La-ot API .htaccess Configuration
+# Enable URL rewriting and proper API routing
+
+RewriteEngine On
+
+# Handle CORS preflight requests
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ $1 [R=200,L]
+
+# Ensure PHP files are executed
+<Files "*.php">
+    Require all granted
+</Files>
+
+# Set proper content type for JSON responses
+<FilesMatch "\.(php)$">
+    Header set Content-Type "application/json"
+</FilesMatch>
+
+# Enable CORS headers
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+Header always set Access-Control-Allow-Headers "Content-Type, Authorization"
+
+# Prevent direct access to config files
+<Files "config.php">
+    Require all denied
+</Files>
+
+# Prevent access to .htaccess
+<Files ".htaccess">
+    Require all denied
+</Files>
+
+# Prevent access to SQL files
+<Files "*.sql">
+    Require all denied
+</Files>
+
+# Set default index
+DirectoryIndex index.php
+
+# Handle 404 errors gracefully
+ErrorDocument 404 /laot-api/index.php
