@@ -75,7 +75,15 @@ class LaotRepository {
                 }
             } catch (e: Exception) {
                 Log.e("LaotRepository", "Full registration exception", e)
-                Result.failure(e)
+                
+                // Check if it's a JSON parsing error (HTML response)
+                if (e.message?.contains("MalformedJsonException") == true || 
+                    e.message?.contains("malformed JSON") == true) {
+                    Log.e("LaotRepository", "Server returned HTML instead of JSON - possible hosting provider interference")
+                    Result.failure(Exception("Server returned invalid response format. This may be due to hosting provider restrictions. Please contact your server administrator."))
+                } else {
+                    Result.failure(e)
+                }
             }
         }
     }

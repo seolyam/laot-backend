@@ -18,6 +18,14 @@ object ApiClient {
         .addInterceptor(HttpLoggingInterceptor().apply { 
             level = HttpLoggingInterceptor.Level.BODY 
         })
+        .addInterceptor { chain ->
+            val original = chain.request()
+            val request = original.newBuilder()
+                .header("User-Agent", "LaotAndroidApp/1.0")
+                .header("Accept", "application/json")
+                .build()
+            chain.proceed(request)
+        }
         .connectTimeout(30, TimeUnit.SECONDS)
         .readTimeout(30, TimeUnit.SECONDS)
         .writeTimeout(30, TimeUnit.SECONDS)
